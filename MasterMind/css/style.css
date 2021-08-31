@@ -1,0 +1,120 @@
+body {
+    background-color: rgb(231, 229, 225);
+    background-image: url(/img/fond.png);
+    background-size: contain;
+}
+
+header {
+    font-family: Goudy Old Style;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(231, 229, 225);
+    background-image: url(img/logo.png);
+    background-repeat: no-repeat;
+}
+
+.nb {
+    font-weight: bold;
+    color: teal;
+}
+
+#board {
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgba(231, 229, 225, 0.8);
+    -webkit-box-shadow: 7px 7px 14px 7px #000000;
+    box-shadow: 7px 7px 14px 7px #000000;
+}
+
+button {
+    border: none;
+    background-color: rgb(231, 229, 225);
+    font-size: xx-large;
+}
+
+.focus .cercle {
+    background-color: rgba(231, 229, 225, 0.8)
+}
+
+.cercle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: inset 3px 4px 5px #000;
+}
+
+.smallCircle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: inset 1px 1px 2px #000;
+}
+
+.bBlack {
+    background-color: black !important;
+    box-shadow: 2px 2px 4px #000;
+}
+
+.bWhite {
+    background-color: white !important;
+    box-shadow: 2px 2px 4px #000;
+}
+
+.bBlue {
+    background-color: blue !important;
+    box-shadow: 2px 2px 4px #000;
+}
+
+.bGreen {
+    background-color: green !important;
+    box-shadow: 2px 2px 4px #000;
+}
+
+.bYellow {
+    background-color: yellow !important;
+    box-shadow: 2px 2px 4px #000;
+}
+
+.bOrange {
+    background-color: orange !important;
+    box-shadow: 2px 2px 4px #000;
+}
+
+.bRed {
+    background-color: red !important;
+    box-shadow: 2px 2px 4px #000;
+}
+
+.bBrown {
+    background-color: rgb(131, 92, 42) !important;
+    box-shadow: 2px 2px 4px #000;
+}
+
+#msg {
+    display: none;
+}
+
+.closebtn {
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.alert {
+    padding: 15px;
+    background-color: rgba(133, 30, 30, 0.6);
+    color: rgb(231, 229, 225);
+}
+
+.hidden {
+    display: none;
+}
