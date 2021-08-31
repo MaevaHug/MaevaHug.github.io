@@ -10,7 +10,7 @@ const pions = [
 
 ];
 
-(pions[4].class); // renvoie bYellow
+// (pions[4].class);renvoie bYellow
 
 let correctPlace = 0;
 let correctColor = 0;
@@ -79,15 +79,7 @@ $(document).ready(function () {
                 $('#line' + tour).addClass('focus');
                 indice = 0;
             };
-        } else {
-            $('#anim').html('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player class="img-fluid" src="https://assets9.lottiefiles.com/packages/lf20_9xRnlw.json"  background="transparent"  speed="1" width="150%" autoplay></lottie-player>');
-            $('#audio').attr("src", "audio/Female-voice-you-lose.mp3");
-            $('#audio')[0].play();
-            $('object').fadeToggle(2000, function () {
-                $('.hidden').fadeIn();
-            });
-            displaySoluce();
-        };
+        }
     });
 
     $('#start').on('click', function () {
@@ -143,40 +135,16 @@ $(document).ready(function () {
             });
             displaySoluce();
         }
-
-
-
-
+        if (tour === 13 && correctPlace != 5) {
+            $('#anim').html('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player class="img-fluid" src="https://assets9.lottiefiles.com/packages/lf20_9xRnlw.json"  background="transparent"  speed="1" width="150%" autoplay></lottie-player>');
+            $('#audio').attr("src", "audio/Female-voice-you-lose.mp3");
+            $('#audio')[0].play();
+            $('object').fadeToggle(2000, function () {
+                $('.hidden').fadeIn();
+            });
+            displaySoluce();
+        };
     };
-
-
 });
 
-//commentaire 1 ligne
-/* commentaire
-plusieurs lignes
-*/
-
-/*function generateBoard() {
-    for (let i = 0; i < 5; i++) {
-         $('#test').html(`<div id="c`+ i +`"class="cercle"></div>`);  
-        
-    };
-}
-
-generateBoard()*/
-
-
-
-
-
-/*
-$('#test').on("click", function () {
-    $('#solutionHidden').toggle(3000);
-});
-
-let test = $('#teste').attr('class').split(' ').pop();
-$('#teste').removeClass(test);
-
-console.log(test);*/
 

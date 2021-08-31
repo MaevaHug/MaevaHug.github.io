@@ -15,7 +15,7 @@
     <!--CDN pour utiliser icons boostraps-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -26,7 +26,6 @@
     <div id="board" class="container text-center mt-5">
         <!--Solution à cacher-->
         <div class="row mt-4">
-
             <div class="col-9 d-flex justify-content-between d-flex flex-column">
                 <div class="d-flex justify-content-between my-1">
                     <div class="mt-2 nb"></div>
@@ -39,23 +38,14 @@
                         <div id="c3" class="cercle hidden"></div>
                         <div id="c4" class="cercle hidden"></div>
                     </div>
-
                 </div>
-
             </div>
             <div class="col"></div>
-
-
         </div>
-
         <div class="row my-4">
-
             <div class="col-9 d-flex justify-content-between d-flex flex-column">
-
                 <div id="line12" class="d-flex justify-content-between my-1">
-
                     <div class="mt-2 nb">12</div>
-
                     <div class="col-3 d-flex justify-content-between mt-3">
                         <div id="b0" class="smallCircle"></div>
                         <div id="b1" class="smallCircle"></div>
@@ -63,7 +53,6 @@
                         <div id="b3" class="smallCircle"></div>
                         <div id="b4" class="smallCircle"></div>
                     </div>
-
                     <div class="col-8 d-flex justify-content-between my-1">
                         <div id="c0" class="cercle"></div>
                         <div id="c1" class="cercle"></div>
@@ -71,7 +60,6 @@
                         <div id="c3" class="cercle"></div>
                         <div id="c4" class="cercle"></div>
                     </div>
-
                 </div>
                 <div id="line11" class="d-flex justify-content-between my-1">
                     <div class="mt-2 nb">11</div>
@@ -264,16 +252,22 @@
             </div>
             <!--bouton reset-->
             <div class="col">
-                <button type="button" id="start"><i class="bi bi-skip-forward-circle-fill"></i></button>
+                <svg class="btn" id="start" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-skip-forward-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.79 5.093A.5.5 0 0 0 4 5.5v5a.5.5 0 0 0 .79.407L7.5 8.972V10.5a.5.5 0 0 0 .79.407L11 8.972V10.5a.5.5 0 0 0 1 0v-5a.5.5 0 0 0-1 0v1.528L8.29 5.093a.5.5 0 0 0-.79.407v1.528L4.79 5.093z"/>
+                  </svg>
                 <div id="anim"></div>
             </div>
-           
         </div>
 
-        <!--Choix des couleurs et bouton submit supprimer id ??????-->
         <div class="row my-4">
             <div class="col-2">
-                <button type="button" id="clear"><i class="bi bi-reply-all-fill"></i></button>
+                <svg class="btn" id="clear" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                    fill="currentColor" class="bi bi-reply-all-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8.021 11.9 3.453 8.62a.719.719 0 0 1 0-1.238L8.021 4.1a.716.716 0 0 1 1.079.619V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z" />
+                    <path
+                        d="M5.232 4.293a.5.5 0 0 1-.106.7L1.114 7.945a.5.5 0 0 1-.042.028.147.147 0 0 0 0 .252.503.503 0 0 1 .042.028l4.012 2.954a.5.5 0 1 1-.593.805L.539 9.073a1.147 1.147 0 0 1 0-1.946l3.994-2.94a.5.5 0 0 1 .699.106z" />
+                </svg>
             </div>
             <div class="col-8 d-flex justify-content-around">
                 <div class="cercle choix bBlack"></div>
@@ -286,7 +280,11 @@
                 <div class="cercle choix bBrown"></div>
             </div>
             <div class="col-2">
-                <button type="button" id="submit"><i class="bi bi-check-circle-fill"></i></button>
+                <svg class="btn" id="submit" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                    fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
             </div>
         </div>
     </div>
@@ -294,15 +292,10 @@
     <div id="msg" class="alert text-center mt-4">
         <p><span class="closebtn">&times;</span>Merci de remplir la ligne !!!!</p>
     </div>
-    
-    
+
     <audio id="audio">
         <source src="" type="audio/mpeg">
     </audio>
-
-
-
-    <div id="test"></div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -314,7 +307,8 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
 
-    <script src="jquery-3.6.0.js"> </script>
+    <!--<script src="jquery-3.6.0.js"> </script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="script.js"></script>
 </body>
