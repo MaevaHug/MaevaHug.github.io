@@ -1,0 +1,442 @@
+body {
+    background-image: url("img/background3.webp");
+    /* Hide scrollbar for IE, Edge & FF */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome Safari & Opéra*/
+}
+
+/*************************************header*******************************************/
+
+header {
+    background-color: #1c202b;
+    color: white;
+    animation: moveUp 2s;
+}
+
+@keyframes moveUp {
+    from {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+h1 {
+    font-size: calc(14px + 3vw);
+}
+
+header h2 {
+    color: yellowgreen;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    font-size: calc(14px + 1vw);
+}
+
+header h3 {
+    width: 12em;
+    margin: auto;
+    color: #7a797b;
+    border-right: 2px solid yellowgreen;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+header img {
+    max-height: 200px;
+}
+
+header #cvPDF {
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.445);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+header #cvPDF:hover {
+    background-color: rgba(255, 255, 255, 0.30);
+    border: 1px solid transparent;
+}
+
+/******animation typewritter******/
+
+.anim-typewriter {
+    animation: typewriter 2800ms steps(35) 1s 1 normal both, blinkCursor 500ms steps(35) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 12em;
+    }
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: yellowgreen;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/************barre de progression-scroll**********************/
+
+.progress {
+    height: 5px;
+    width: 0%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: progress 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes progress {
+    to {
+        background-color: yellowgreen;
+        width: 100%;
+    }
+}
+
+/******barre de navigation*****/
+
+.navbar {
+    background-color: #1c202bce !important;
+    font-size: 12px;
+    border-bottom: 1px solid #fff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav-pills .nav-link {
+    color: #fff !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+    color: yellowgreen !important;
+}
+
+/**btn hamburger navigation**/
+
+.navbar-toggler {
+    color: yellowgreen !important;
+    border-style: none;
+}
+
+#smoothScroll {
+    margin: auto;
+    color: inherit;
+}
+
+/********Btn du header avec animation grow on hover******/
+
+#btnLinkedIn, #btnMail, #btnGitHub, #btnTel {
+    /* ou header a????*/
+    color: white;
+    font-size: xx-large;
+    padding: 0;
+    margin: 15px 8px;;
+}
+
+#btnLinkedIn:hover, #btnMail:hover, #btnGitHub:hover, #btnTel:hover {
+    animation: iconGrow .3s ease-in-out;
+    animation-fill-mode: forwards;
+    /*permet de rester sur EF en fin d'animation*/
+}
+
+@keyframes iconGrow {
+    from {
+        transform: scale(1.0);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+/****************************************sections**************************************/
+.category {
+    font-size: 35px;
+    color: #263547;
+    margin: 55px auto 2px;
+}
+#introduction .category {
+    color: yellowgreen;
+    margin: 30px auto 20px auto;
+}
+
+#introduction {
+    color: white;
+    padding-top: 25px;
+}
+
+#introduction span {
+    color: yellowgreen;
+    font-size: x-large;
+}
+
+.section {
+    border: 2px solid black;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+    padding-top: 0%;
+    padding-top: 0;
+    align-items: center;
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+    min-height: 80vh;
+    height: 100%;
+    background-color: #dfe0e0;
+}
+
+.scrollContent {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.scrollContent::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome Safari & Opéra*/
+}
+
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.div {   
+    color: black;
+    border-radius: 8px;
+    margin: 0 10px 0 10px;
+    padding: 5px;
+}
+
+main h2 {
+    color: #263547;
+    margin: 15px auto;
+}
+
+@media screen and (orientation: portrait) and (min-width: 800px)  {
+    #skillsInfo .contenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/***********formation & expérience professionnelle******/
+
+ol, ul {
+    list-style: none;
+}
+
+.timeline {
+    padding: 20px 10px;
+    margin: 0;
+    position: relative;
+}
+
+.timeline:before {
+    top: 0;
+    bottom: 0;
+    left: 13px;
+    position: absolute;
+    content: " ";
+    width: 4px;
+    background: #7a797b;
+}
+
+.timeline li {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline>li:after {
+    clear: both;
+}
+
+.timeline>li:before, .timeline>li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline li .timeline-round {
+    background-color: #7a797b;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    margin-left: -12px;
+    border-radius: 50%;
+}
+
+.timeline-panel-container {
+    width: 100%;
+    float: left;
+    text-align: left;;
+}
+
+.timeline-panel {
+    width: 90%;
+    float: right;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 0;
+    position: relative;
+    -webkit-box-shadow: 3px 3px 3px 3px #d0d0d0;
+    box-shadow: 3px 3px 3px 3px #d0d0d0;
+    /*background: #fff;
+    background-image: url('img/background.webp');*/
+}
+
+.div {
+    -webkit-box-shadow: 3px 3px 3px 3px #d0d0d0;
+    box-shadow: 3px 3px 3px 3px #d0d0d0;
+}
+
+.timeline-content h3 {
+    font-size: calc(14px + 1vw);
+    color: #1c202b;
+}
+
+.timeline-content h5 {
+    font-size: calc(9px + 1vw);
+    color: yellowgreen;
+}
+
+.timeline-content {
+    color: #282828;
+}
+
+.timeline-content p {
+    font-size: calc(8px + 1vw);
+}
+
+.yellow {
+    color: yellowgreen;
+}
+
+@media screen and (min-width: 1200px) {
+    .timeline-content h5, .timeline-content p {
+        font-size: 20px;
+    }
+    .timeline-content h3 {
+        font-size: 25px;
+    }
+}
+
+/*******logo languages*******************/
+
+#skillsInfo img {
+    filter: grayscale(80%);
+    max-height: 56px;
+    margin: auto;
+}
+
+#skillsInfo img:hover {
+    filter: grayscale(0%);
+}
+
+/*********barre de progress par langage******/
+
+.myProgress {
+    width: 100%;
+    height: 25px;
+    padding: 0;
+    margin-top: 15px;
+    background-color: rgba(153, 205, 50, 0.096);
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.myBar {
+    height: 23px;
+    margin-left: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: yellowgreen;
+    filter: grayscale(80%);
+}
+
+/*****Eléments cachés à faire apparaître*********/
+
+.hidden {
+    opacity: 0;
+}
+
+.fadeEffect {
+    animation: fadeIn 1.4s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(.5, .5)
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*****************************************footer****************************************/
+
+#smoothScroll {
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    display: none;
+}
+
+footer {
+    background-color: #1c202b;
+    color: white;
+    height: 16vh;
+    display: flex;
+    align-items: center;
+}
+footer p {
+    max-width: 25vw;
+}
+
+footer img {
+    position: absolute;
+    right: 1vh;
+    max-height: 100px;
+}
