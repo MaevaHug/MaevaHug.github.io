@@ -7,10 +7,10 @@ $(document).ready(function () {
     { 'name': 'css', 'progress': 35 },
     { 'name': 'bootstrap', 'progress': 45 },
     { 'name': 'javascript', 'progress': 15 },
-    { 'name': 'jquery', 'progress': 20 },
-    { 'name': 'php', 'progress': 1 },
-    { 'name': 'symfony', 'progress': 1 },
-    { 'name': 'wordpress', 'progress': 1 },
+    { 'name': 'jquery', 'progress': 25 },
+    { 'name': 'php', 'progress': 30 },
+    { 'name': 'symfony', 'progress': 40 },
+    { 'name': 'wordpress', 'progress': 50 },
   ];
   init();
   addProgress();
